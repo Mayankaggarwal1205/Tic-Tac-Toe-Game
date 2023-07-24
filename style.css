@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600&family=Beau+Rivage&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Fredoka+One&family=Ingrid+Darling&family=Inspiration&family=Kanit:ital,wght@1,900&family=Libre+Baskerville:wght@700&family=Lobster&family=Merriweather+Sans:ital,wght@1,800&family=Merriweather:wght@900&family=Pacifico&family=Playball&family=Righteous&family=Roboto+Slab:wght@900&family=Roboto:wght@900&family=Rubik+Wet+Paint&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600&family=Baloo+Bhaina+2:wght@800&family=Beau+Rivage&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Fredoka+One&family=Ingrid+Darling&family=Inspiration&family=Kanit:ital,wght@1,900&family=Libre+Baskerville:wght@700&family=Lobster&family=Merriweather+Sans:ital,wght@1,800&family=Merriweather:wght@900&family=Pacifico&family=Playball&family=Righteous&family=Roboto+Slab:wght@900&family=Roboto:wght@900&family=Rubik+Wet+Paint&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    padding-left: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    list-style: none;
+}
+
+.gamecontainer{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgb(232, 220, 242);
+}
+
+.gameInfo{
+    padding: 0 3vw;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt-0{
+    border-top: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+
+#reset{
+    margin: 0 1vw;
+    background-color: black;
+    padding: 6px;
+    font-size: 14px;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0vw;
+    transition: width 1s ease-in-out;
+    position: absolute;
+}
+
+@media screen and (max-width:950px) {
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
